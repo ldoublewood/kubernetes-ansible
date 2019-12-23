@@ -1,0 +1,3 @@
+---
+dependencies:
+  - { role: kubepkg, pkgs: ["kubelet", "kubeadm", "kubectl"] }
