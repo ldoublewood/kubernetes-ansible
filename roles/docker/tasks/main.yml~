@@ -1,4 +1,0 @@
-- name: Install the package "docker"
-  apt:
-    name: docker.io
-    state: present

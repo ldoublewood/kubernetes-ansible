@@ -8,4 +8,4 @@
     daemon_reload: yes
     state: started
     enabled: yes
-  register: started_docker    
+  register: started_docker
