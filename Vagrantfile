@@ -4,7 +4,7 @@ def set_vbox(vb, config)
   vb.memory = 2048
   vb.cpus = 2
 
-  config.vm.box = "ubuntu1804"
+  config.vm.box = "generic/ubuntu1804"
 end
 
 Vagrant.configure("2") do |config|

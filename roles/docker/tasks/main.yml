@@ -1,0 +1,11 @@
+- name: Install the package "docker"
+  apt:
+    name: docker.io
+    state: present
+- name: Enable and check Docker service
+  systemd:
+    name: docker
+    daemon_reload: yes
+    state: started
+    enabled: yes
+  register: started_docker    

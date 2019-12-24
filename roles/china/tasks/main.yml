@@ -1,0 +1,14 @@
+- name: copy aliyun.list file
+  copy: src=aliyun.list dest=/etc/apt/sources.list.d/aliyun.list
+  tags:
+    - china
+- name: stat sources.list
+  stat: path=/etc/apt/sources.list
+  register: source_stat
+  tags:
+    - china
+- name: Move sources to org
+  command: mv /etc/apt/sources.list /etc/apt/sources.list.org
+  when: source_stat.stat.exists
+  tags:
+    - china
