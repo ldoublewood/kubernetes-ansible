@@ -11,7 +11,8 @@ init_opts: ""
 # Any other additional opts you want to add..
 kubeadm_opts: ""
 # For example:
-# kubeadm_opts: '--apiserver-cert-extra-sans "k8s.domain.com,kubernetes.domain.com"'
+# kubeadm_opts: '--apiserver-cert-extra-sans "k8s.domain.com,kubernetes.domain.com" --image-repository "registry.aliyuncs.com/google_containers"'
+kubeadm_opts: '--image-repository "registry.aliyuncs.com/google_containers"'
 
 service_cidr: "10.96.0.0/12"
 pod_network_cidr: "10.244.0.0/16"
