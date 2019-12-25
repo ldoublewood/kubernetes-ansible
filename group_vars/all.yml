@@ -50,3 +50,7 @@ kubernetes_apt_key: https://mirrors.aliyun.com/kubernetes/apt/doc/apt-key.gpg
 
 #kubernetes_apt_url: http://apt.kubernetes.io/
 kubernetes_apt_url: https://mirrors.aliyun.com/kubernetes/apt/
+
+insecure-registries-item: 192.168.121.1:5000
+
+registry-mirrors-item: http://192.168.121.1:5000

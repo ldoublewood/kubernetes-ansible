@@ -2,6 +2,10 @@
   apt:
     name: docker.io
     state: present
+- name: copy daemon.json
+  template:
+    src: daemon.json.j2
+    dest: /etc/docker/daemon.json
 - name: Enable and check Docker service
   systemd:
     name: docker
