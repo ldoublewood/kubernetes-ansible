@@ -10,7 +10,7 @@ end
 Vagrant.configure("2") do |config|
   config.vm.provider "libvirt"
   master = 1
-  node = 2
+  node = 3
 
   (1..(master + node)).each do |mid|
     name = (mid <= node) ? "n" : "m"
