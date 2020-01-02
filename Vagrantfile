@@ -1,7 +1,7 @@
 Vagrant.require_version ">= 1.7.0"
 
 def set_vbox(vb, config)
-  vb.memory = 2048
+  vb.memory = 4096
   vb.cpus = 2
 
   config.vm.box = "generic/ubuntu1804"

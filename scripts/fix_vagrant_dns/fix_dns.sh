@@ -1,0 +1,1 @@
+ansible all -u vagrant -b -m shell -a "sed -i 's/4.2.2.1 4.2.2.2 208.67.220.220/192.168.0.1/g' /etc/systemd/resolved.conf && sed -i 's/DNSSEC=yes/DNSSEC=no/g' /etc/systemd/resolved.conf && systemctl restart systemd-resolved"

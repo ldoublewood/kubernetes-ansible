@@ -6,6 +6,7 @@
     - { role: china, tags: china }
     - os
     - { role: docker, tags: docker }
+#    - dockercacheproxy
 
 - hosts: master
   gather_facts: yes
