@@ -1,9 +1,8 @@
 Vagrant.require_version ">= 1.7.0"
 
-def set_vbox(vb, config)
-  vb.memory = 4096
+def set_vbox(vb, config, mem)
+  vb.memory = mem
   vb.cpus = 2
-
   config.vm.box = "generic/ubuntu1804"
 end
 
@@ -20,7 +19,11 @@ Vagrant.configure("2") do |config|
       n.vm.hostname = "k8s-#{name}#{id}"
 
       n.vm.provider :libvirt do |vb, override|
-        set_vbox(vb, override)
+        mem = 8096
+        if mid == 1
+          mem = 4096
+        end
+        set_vbox(vb, override, mem)
       end
     end
   end
