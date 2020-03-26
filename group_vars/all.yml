@@ -53,4 +53,4 @@ kubernetes_apt_url: https://mirrors.aliyun.com/kubernetes/apt/
 
 insecure_registries_item: 192.168.121.1:5000
 
-registry_mirrors_item: http://192.168.121.1:5000
+registry_mirrors_item: http://hub-mirror.c.163.com
