@@ -14,7 +14,7 @@ Vagrant.configure("2") do |config|
   (1..(master + node)).each do |mid|
     name = (mid <= node) ? "n" : "m"
     id   = (mid <= node) ? mid : (mid - node)
-    mem  = (mid <= node) ? 4096 : 8192
+    mem  = (mid <= node) ? 8192 : 4096
     config.vm.define "k8s-#{name}#{id}" do |n|
       n.vm.hostname = "k8s-#{name}#{id}"
 
