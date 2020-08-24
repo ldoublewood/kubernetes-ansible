@@ -7,3 +7,8 @@
 * package installation via apt
 * no pain in China because mirror can be easily configured
 
+## fix in case of target host version is ubuntu 20
+```bash
+sed -i 's/bionic/focal/g' roles/china/tasks/aliyun.list
+sed -i 's/xeninal/focal/g' roles/kubepkg/main.yml
+```
