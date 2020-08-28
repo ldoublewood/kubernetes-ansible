@@ -1,0 +1,39 @@
+---
+
+- name: copy kubelet pkg file
+  copy:
+    src: "kubelet_1.18.8-00_amd64.deb"
+    dest: /var/tmp/
+    
+- name: Install kubelet
+  apt:
+      deb: /var/tmp/kubelet_1.18.8-00_amd64.deb
+
+- name: copy kubectl pkg file
+  copy:
+    src: "kubectl_1.18.8-00_amd64.deb"
+    dest: /var/tmp/
+    
+- name: Install kubectl
+  apt:
+      deb: /var/tmp/kubectl_1.18.8-00_amd64.deb
+
+
+- name: copy cni pkg file
+  copy:
+    src: "kubernetes-cni_0.8.6-00_amd64.deb"
+    dest: /var/tmp/
+    
+- name: Install cni
+  apt:
+      deb: /var/tmp/kubernetes-cni_0.8.6-00_amd64.deb
+
+- name: copy adm pkg file
+  copy:
+    src: "kubeadm_1.18.8-00_amd64.deb"
+    dest: /var/tmp/
+    
+- name: Install adm
+  apt:
+      deb: /var/tmp/kubeadm_1.18.8-00_amd64.deb
+
