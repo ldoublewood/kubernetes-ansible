@@ -1,3 +1,5 @@
 *.retry
 .vagrant
 hosts.ini
+roles/kubepkgfile/files/*
+!.gitkeep

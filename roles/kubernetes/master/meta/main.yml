@@ -1,3 +1,4 @@
 ---
 dependencies:
-  - { role: kubepkg, pkgs: ["kubelet", "kubeadm", "kubectl"] }
+  - { role: kubepkgfile }
+#  - { role: kubepkg, pkgs: ["kubelet", "kubeadm", "kubectl"] }
