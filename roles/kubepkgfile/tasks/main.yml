@@ -1,5 +1,14 @@
 ---
 
+- name: copy cni pkg file
+  copy:
+    src: "kubernetes-cni_0.8.6-00_amd64.deb"
+    dest: /var/tmp/
+    
+- name: Install cni
+  apt:
+      deb: /var/tmp/kubernetes-cni_0.8.6-00_amd64.deb
+
 - name: copy kubelet pkg file
   copy:
     src: "kubelet_1.18.8-00_amd64.deb"
@@ -19,14 +28,14 @@
       deb: /var/tmp/kubectl_1.18.8-00_amd64.deb
 
 
-- name: copy cni pkg file
+- name: copy cri-tools file
   copy:
-    src: "kubernetes-cni_0.8.6-00_amd64.deb"
+    src: "cri-tools_1.13.0-01_amd64.deb"
     dest: /var/tmp/
     
-- name: Install cni
+- name: Install cri-tools
   apt:
-      deb: /var/tmp/kubernetes-cni_0.8.6-00_amd64.deb
+      deb: /var/tmp/cri-tools_1.13.0-01_amd64.deb
 
 - name: copy adm pkg file
   copy:

@@ -2,5 +2,5 @@
   roles:
       - user
   vars:
-    - group: vagrant
-    - user: vagrant
+    - group: vm
+    - user: vm
